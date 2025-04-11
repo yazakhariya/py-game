@@ -147,7 +147,7 @@ class AlienInvasion:
         self.aliens.draw(self.screen)
 
         pygame.display.flip()                                                                       #updates the screen                             
-q
+
 
 if __name__ == '__main__':
     ai = AlienInvasion()                                                                            #instance of the class gets created
