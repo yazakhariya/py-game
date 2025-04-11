@@ -6,8 +6,13 @@ class Settings:
 
         self.ship_speed = 5
 
-        self.bullet_speed = 2.0
+        self.bullet_speed = 5.0
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 5
+
+        self.alien_speed = 2.5
+        self.fleet_drop_speed = 10
+        self.fleet_direction = 1                  # moving to the right, -1 for a left moving
+        

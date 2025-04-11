@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["midbottom"]
+  "cSpell.words": [
+    "blitme",
+    "groupcollide",
+    "KEYUP",
+    "midbottom",
+    "spritecollideany"
+  ]
 }
