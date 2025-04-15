@@ -55,9 +55,10 @@ class AlienInvasion:
 
 
     def _ship_hit(self):
-        if self.stats.ship_left > 0:
+        if self.stats.ships_left > 0:
 
-            self.stats.ship_left -= 1
+            self.stats.ships_left -= 1
+            self.sb.prep_ships()
 
             self.aliens.empty()
             self.bullets.empty()
@@ -110,6 +111,8 @@ class AlienInvasion:
             self.settings.initialize_dynamic_settings()
             self.stats.reset_stats()
             self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_ships()
             self.game_active = True
             pygame.mouse.set_visible(False)
 
@@ -149,6 +152,8 @@ class AlienInvasion:
             self.bullets.empty()                                # clear the bullets
             self.settings.increase_speed()
             self._create_fleet()                                # create a new fleet
+            self.stats.level += 1
+            self.sb.prep_level()
 
     
     def _create_fleet(self):

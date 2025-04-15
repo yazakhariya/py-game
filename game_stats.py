@@ -6,5 +6,6 @@ class GameStats:
 
 
     def reset_stats(self):
-        self.ship_left = self.settings.ship_limit
-        self.score = 0                                    #gets updated
+        self.ships_left = self.settings.ships_limit
+        self.score = 0                                    #gets updated when a new game's started
+        self.level = 1

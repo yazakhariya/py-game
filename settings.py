@@ -6,7 +6,7 @@ class Settings:
 
         self.speedup_scale = 3.2
         self.score_scale = 1.5
-        self.ship_limit = 3
+        self.ships_limit = 3
         self.initialize_dynamic_settings()
 
         self.bullet_width = 3
