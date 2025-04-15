@@ -1,9 +1,13 @@
 {
   "cSpell.words": [
+    "blit",
     "blitme",
+    "centerx",
+    "collidepoint",
     "groupcollide",
     "KEYUP",
     "midbottom",
+    "MOUSEBUTTONDOWN",
     "spritecollideany"
   ]
 }
