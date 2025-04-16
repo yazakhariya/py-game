@@ -3,6 +3,7 @@ from pathfinding.finder import AStarFinder
 
 
 class AI_NPC:
+
     def __init__(self):
         self.path = []
 

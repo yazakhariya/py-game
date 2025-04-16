@@ -1,4 +1,5 @@
 class Settings:
+
     def __init__(self):
         self.screen_width = 1200
         self.screen_height = 800
@@ -16,14 +17,12 @@ class Settings:
 
         self.fleet_drop_speed = 10
         
-
     def initialize_dynamic_settings(self):
         self.ship_speed = 3
         self.bullet_speed = 5.0
         self.alien_speed = 2.5
         self.fleet_direction = 1                  # moving to the right, -1 for a left moving
         self.alien_points = 50
-
 
     def increase_speed(self):
         self.ship_speed *= self.speedup_scale
