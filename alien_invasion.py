@@ -147,15 +147,18 @@ class AlienInvasion:
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
             self.sb.check_high_score()
-        
+
         if not self.aliens:                                     # if the fleet is destroyed
+            self._start_new_level()
+
+    def _start_new_level(self):
             self.bullets.empty()                                # clear the bullets
             self.settings.increase_speed()
             self._create_fleet()                                # create a new fleet
             self.stats.level += 1
             self.sb.prep_level()
 
-    
+
     def _create_fleet(self):
         alien = Alien(self)
         alien_width, alien_height = alien.rect.size
