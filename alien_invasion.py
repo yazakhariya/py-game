@@ -1,8 +1,7 @@
+import json
 import sys
-from time import sleep
-
 import pygame
-
+from pathlib import Path
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
@@ -10,7 +9,9 @@ from alien import Alien
 from game_stats import GameStats
 from button_class import Button
 from scoreboard import Scoreboard
+from time import sleep
 
+path = Path("high_score.json")
 class AlienInvasion:
 
     def __init__(self):
@@ -51,6 +52,11 @@ class AlienInvasion:
             self.clock.tick(60)  
 
     def _quit_game(self):
+        score = self.stats.get_saved_high_score()
+        if score < self.stats.high_score:
+            save_score = json.dumps(self.stats.high_score)
+            path.write_text(save_score)
+
         sys.exit()
 
     def _ship_hit(self):
